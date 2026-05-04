@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+
+<body>
+	<section>
+
+		<div class="d-flex">
+
+			<!-- 🔥 SIDEBAR -->
+			<div class="sidebar p-3">
+				<h4 class="text-white mb-4">Admin Panel</h4>
+
+
+				<a href="/admin/loadAddProduct"><i class="fa-solid fa-plus"></i>
+					Add Product</a> <a href="/admin/category"><i
+					class="fa-solid fa-list"></i> Category</a> <a href="/admin/products"><i
+					class="fa-solid fa-table"></i> Products</a> <a href="/admin/orders"><i
+					class="fa-solid fa-box"></i> Orders</a> <a href="/admin/users?type=1"><i
+					class="fa-solid fa-users"></i> Users</a> <a href="/admin/users?type=2"><i
+					class="fa-solid fa-user-shield"></i> Admins</a>
+			</div>
+
+			<!-- 🔥 MAIN CONTENT -->
+			<div class="main-content p-4 w-100">
+
+				<!-- Top Bar -->
+				<div
+					class="topbar mb-4 d-flex justify-content-center align-items-center">
+					<h3 class="fw-bold m-0">Admin Dashboard</h3>
+				</div>
+
+				<!-- Stats -->
+				<div class="row g-4 mb-4 justify-content-center">
+					<div class="col-md-3">
+						<div class="stat-box">
+							<h6>Products</h6>
+							<h2 th:text="${productCount}">0</h2>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="stat-box">
+							<h6>Orders</h6>
+							<h2 th:text="${orderCount}">0</h2>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="stat-box">
+							<h6>Users</h6>
+							<h2 th:text="${userCount}">0</h2>
+						</div>
+					</div>
+
+					
+				</div>
+
+				<!-- Quick Actions -->
+				<div class="row g-4">
+					<div class="col-md-4">
+						<a href="/admin/loadAddProduct">
+							<div class="action-box">
+								<i class="fa-solid fa-plus"></i>
+								<p>Add Product</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4">
+						<a href="/admin/category">
+							<div class="action-box">
+								<i class="fa-solid fa-list"></i>
+								<p>Add Category</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4">
+						<a href="/admin/products">
+							<div class="action-box">
+								<i class="fa-solid fa-table"></i>
+								<p>View Products</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4">
+						<a href="/admin/orders">
+							<div class="action-box">
+								<i class="fa-solid fa-box"></i>
+								<p>Orders</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4">
+						<a href="/admin/users?type=1">
+							<div class="action-box">
+								<i class="fa-solid fa-users"></i>
+								<p>Users</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4">
+						<a href="/admin/users?type=2">
+							<div class="action-box">
+								<i class="fa-solid fa-user-shield"></i>
+								<p>Admins</p>
+							</div>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+</body>
+</html>
